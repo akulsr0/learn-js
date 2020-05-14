@@ -1,0 +1,24 @@
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 0;
+  padding: 0;
+}
+
+.content-area {
+  margin-top: 20px;
+}
+
+.programs-div h3,
+.questions-div h3 {
+  margin-left: 10px;
+}

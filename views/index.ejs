@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./css/main.css" />
+    <title>LearnJS</title>
+  </head>
+  <body>
+    <%- include('./header.ejs') %> <%- include('./nav.ejs') %>
+    <div class="content-area">
+      <div class="programs-div">
+        <h3>Programs</h3>
+        <ul>
+          <% for(let program of programs) { %>
+          <li>
+            <a href="programs/<%=program.slug%>"><%= program.title %></a>
+          </li>
+          <% } %>
+        </ul>
+      </div>
+      <div class="questions-div">
+        <h3>Questions</h3>
+        <ul>
+          <% for(let question of questions) { %>
+          <li>
+            <a href="questions/<%=question.slug%>"><%= question.title %></a>
+          </li>
+          <% } %>
+        </ul>
+      </div>
+    </div>
+  </body>
+</html>

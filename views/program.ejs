@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title><%=program.title%> | LearnJS</title>
+    <link
+      rel="stylesheet"
+      href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/10.0.3/styles/docco.min.css"
+    />
+  </head>
+  <body>
+    <%- include('./header.ejs') %> <%- include('./nav.ejs') %>
+    <div style="padding: 10px; margin-top: 10px;">
+      <h3><%=program.title%></h3>
+      <div
+        style="
+          background-color: #f2f2f2;
+          padding: 2px 10px;
+          border-radius: 4px;
+          margin-top: 10px;
+        "
+      >
+        <%- program.html %>
+      </div>
+    </div>
+  </body>
+</html>
