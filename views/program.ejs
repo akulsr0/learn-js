@@ -13,15 +13,7 @@
     <%- include('./header.ejs') %> <%- include('./nav.ejs') %>
     <div style="padding: 10px; margin-top: 10px;">
       <h3><%=program.title%></h3>
-      <div
-        style="
-          background-color: #f2f2f2;
-          padding: 2px 10px;
-          border-radius: 4px;
-          margin-top: 10px;
-          overflow: scroll;
-        "
-      >
+      <div style="margin-top: 10px; overflow: scroll;">
         <%- program.html %>
       </div>
       <%- include('./footer.ejs') %>
