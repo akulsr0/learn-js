@@ -1,6 +1,6 @@
-```javascript
-// When a function remembers it's lexical scope even when it is executed out of its lexical scope, closure persists.
+When a function remembers it's lexical scope even when it is executed out of its lexical scope, closure persists.
 
+```javascript
 const outerFunction = (...args) => {
 	let counter = 0;
 	return () => {
