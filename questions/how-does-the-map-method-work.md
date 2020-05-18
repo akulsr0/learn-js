@@ -1,7 +1,6 @@
 ## Polyfill for Array.prototype.map() function
 ### .map() method performs a function(callback) over all the elements of the array and returns a new array ie. it does not mutate the original array.
-```
-
+```javascript
 let arr = [6, 9, 3, 7, 12];
 
 Array.prototype.myMap = function(callback) {
