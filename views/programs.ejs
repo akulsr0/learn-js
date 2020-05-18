@@ -10,7 +10,7 @@
     <%- include('./header.ejs') %> <%- include('./nav.ejs') %>
     <div class="content-area">
       <div class="programs-div">
-        <h3>Programs</h3>
+        <h3>Programs (<%=programs.length%>)</h3>
         <ul>
           <% for(let program of programs) { %>
           <li>
