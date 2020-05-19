@@ -40,8 +40,12 @@ router.get('/', async (req, res) => {
       questions.push(question);
     });
 
-    let qPrograms = programs.filter((p) => p.slug.includes(sQuery));
-    let qQuestions = questions.filter((q) => q.slug.includes(sQuery));
+    let qPrograms = programs.filter((p) =>
+      p.title.toLowerCase().includes(sQuery)
+    );
+    let qQuestions = questions.filter((q) =>
+      q.title.toLowerCase().includes(sQuery)
+    );
 
     res.render('searchresults', {
       sQuery,
