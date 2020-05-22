@@ -1,6 +1,6 @@
 ### Program to find the number of 1s in binary representation of a number.
-```javascript
 
+```javascript
 const noOfOnes = num => {
 	let count = 0;
 	while (num) {
@@ -21,5 +21,4 @@ console.log(noOfOnes(8)); // 1
 // 3 -> 11
 // 7 -> 111
 // 8 -> 1000
-
 ```
