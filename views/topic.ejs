@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title><%=topic%>: LearnJS</title>
+  </head>
+  <body>
+    <%- include('./header.ejs') %> <%- include('./nav.ejs') %>
+    <div style="margin-top: 20px; padding-left: 10px;">
+      <h3>Topic: <%=topic%></h3>
+      <div class="programs-div" style="margin-top: 10px;">
+        <h3>Programs</h3>
+        <ul>
+          <% for(let program of programs) { %>
+          <li>
+            <a href="/programs/<%=program.slug%>"><%= program.title %></a>
+          </li>
+          <% } %>
+        </ul>
+      </div>
+      <div class="questions-div">
+        <h3>Questions</h3>
+        <ul>
+          <% for(let question of questions) { %>
+          <li>
+            <a href="/questions/<%=question.slug%>"><%= question.title %></a>
+          </li>
+          <% } %>
+        </ul>
+      </div>
+    </div>
+    <%-include('./footer.ejs') %>
+  </body>
+</html>

@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./css/main.css" />
+    <title>Topics: LearnJS</title>
+  </head>
+  <body>
+    <%- include('./header.ejs') %> <%- include('./nav.ejs') %>
+    <div style="margin-top: 20px; padding-left: 10px;">
+      <h3>Topics</h3>
+      <ul>
+        <% for(let [topic, tcontent] of Object.entries(topics)) { %>
+        <li>
+          <a href="/topics/<%=topic%>">
+            <%=topic.charAt(0).toUpperCase()+topic.slice(1)%>(<%=tcontent.length%>)
+          </a>
+        </li>
+        <% } %>
+      </ul>
+    </div>
+    <%-include('./footer.ejs') %>
+  </body>
+</html>
