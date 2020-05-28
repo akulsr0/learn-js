@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/10.0.3/styles/docco.min.css"
+    />
+    <style>
+      pre {
+        border-left: 2px solid #444;
+        padding: 4px 10px;
+        font-size: unset;
+      }
+    </style>
+    <title>LearnJS</title>
+  </head>
+  <body>
+    <%- include('./header.ejs') %> <%- include('./nav.ejs') %>
+    <div style="margin-top: 20px; padding-left: 10px;">
+      <h3>Question: <%=title%> </h3>
+      <div style="margin-top: 10px; overflow: scroll;">
+        <%- mdHtml %>
+      </div>
+      <h3>Answer:</h3>
+      <div style="margin-top: 10px;">
+        <div id="options">
+          <% for(let option of randomQues.options) { %>
+          -> <input type="radio" value="<%=option%>" id="<%=option%>" name="options" />
+          <label for='<%=option%>'><%=option%></label> <br />
+          <% } %>
+        </div>
+        <div style="margin-top: 10px;">
+          <div id="correct" style="display: none;">
+            <h4>
+              ✅ Correct Answer
+            </h4>
+          </div>
+          <div id="wrong" style="display: none;">
+            <h4>
+              ❌ Wrong Answer
+              <br />
+              <h4 style="margin-top: 8px; font-weight: 300">Correct Answer: <%= randomQues.answer %></h4 style="margin-top: 4px; font-weight: 300">
+            </h4>
+          </div>
+        </div>
+        <div style="margin-top: 8px;">
+          <button onclick="submitChoice()">Submit</button>
+          <button onclick="refresh()" >New Question</button>
+        </div>
+      </div>
+    </div>
+    <%- include('./footer.ejs') %>
+  </body>
+  <script type="text/javascript" >
+    function submitChoice() {
+      document.getElementById('correct').style.display = 'none';
+      document.getElementById('wrong').style.display = 'none';
+      let options = document.getElementsByName('options');
+      let choice;
+      for (let opt of options) {
+        if (opt.checked) {
+          choice = opt;
+        }
+      }
+      if(choice===undefined) {
+        return window.alert('Select an option');
+      }
+      if (choice.value === '<%- randomQues.answer %>') {
+        document.getElementById('correct').style.display = 'block';
+      } else {
+        document.getElementById('wrong').style.display = 'block';
+      }
+    }
+    
+    function refresh() {
+        window.location.reload()
+    }
+</script>
+</html>
