@@ -4,7 +4,8 @@
   "description": "",
   "main": "server.js",
   "scripts": {
-    "start": "node ."
+    "start": "node .",
+    "test": "jest"
   },
   "author": "Akul Srivastava",
   "license": "MIT",
@@ -16,5 +17,8 @@
     "highlight.js": "^10.0.3",
     "marked": "^1.0.0",
     "underscore": "^1.10.2"
+  },
+  "devDependencies": {
+    "jest": "^26.0.1"
   }
 }
