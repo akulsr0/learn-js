@@ -34,6 +34,41 @@ let questions = [
     options: ['true', 'false'],
     answer: 'false',
   },
+  {
+    title: 'typeof-array',
+    options: ['array', 'object', 'null', 'undefined'],
+    answer: 'object',
+  },
+  {
+    title: 'typeof-nan',
+    options: ['number', 'object', 'null', 'undefined'],
+    answer: 'number',
+  },
+  {
+    title: 'delete-array-element',
+    options: [
+      '[ 1, 2, 3, <1 empty item>, 5 ]',
+      '[ 1, 2, 3, null, 5 ]',
+      '[ 1, 2, 3, 4, 5 ]',
+      '[ 1, 2, 3, undefined, 5 ]',
+    ],
+    answer: '[ 1, 2, 3, <1 empty item>, 5 ]',
+  },
+  {
+    title: 'array-length-after-deleting-element',
+    options: ['5', '4', '0', 'Reference Error'],
+    answer: '5',
+  },
+  {
+    title: 'calling-function-before-defining',
+    options: ['John', 'Jane', 'undefined', 'Reference Error'],
+    answer: 'John',
+  },
+  {
+    title: 'instanceof-number',
+    options: ['true', 'false'],
+    answer: 'false',
+  },
 ];
 
 module.exports = { questions };
