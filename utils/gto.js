@@ -69,6 +69,11 @@ let questions = [
     options: ['true', 'false'],
     answer: 'false',
   },
+  {
+    title: 'is-deleted-array-element-undefined?',
+    options: ['-1', '4', 'null', 'empty'],
+    answer: '-1',
+  },
 ];
 
 module.exports = { questions };
