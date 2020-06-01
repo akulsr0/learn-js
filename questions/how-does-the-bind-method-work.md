@@ -2,9 +2,7 @@
 
 .bind() method binds the this keyword of a function with an object(passed as the first argument) and returns it. This function can be invoked later. Rest of the arguments can be passed separated by a comma.
 
-
 ```javascript
-
 const person = {
 	firstname: 'John',
 	lastname: 'Doe'
@@ -18,15 +16,12 @@ function printInfo(age, country) {
 
 var print = printInfo.bind(person, 100); // Original bind method
 print('xyz');
-// Output for this goes here :
 // Hi, my name is John Doe and I am 100 years old. I live in xyz
-
 
 // Our implementation of bind method :
 Function.prototype.myBind = function(...args) {
-	let that = this,
-		val = args.slice(1);
-
+	let that = this;
+	let val = args.slice(1);
 	return function(...args2) {
 		that.apply(args[0], [...val, ...args2]);
 	};
@@ -34,8 +29,5 @@ Function.prototype.myBind = function(...args) {
 
 var myPrint = printInfo.myBind(person, 100);
 myPrint('xyz');
-
-// Output for polyfill of .bind() method we built :
 // Hi, my name is John Doe and I am 100 years old. I live in xyz
-
 ```
