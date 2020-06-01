@@ -16,8 +16,11 @@ function printInfo(age, country) {
 	);
 }
 
-var print = printInfo.bind(person, 100);
-print('xyz'); // Original bind method
+var print = printInfo.bind(person, 100); // Original bind method
+print('xyz');
+// Output for this goes here :
+// Hi, my name is John Doe and I am 100 years old. I live in xyz
+
 
 // Our implementation of bind method :
 Function.prototype.myBind = function(...args) {
@@ -32,13 +35,7 @@ Function.prototype.myBind = function(...args) {
 var myPrint = printInfo.myBind(person, 100);
 myPrint('xyz');
 
-// Output of original bind method :
+// Output for polyfill of .bind() method we built :
 // Hi, my name is John Doe and I am 100 years old. I live in xyz
-
-// Output of polyfill of bind method we built :
-// Hi, my name is John Doe and I am 100 years old. I live in xyz
-
-
-
 
 ```
