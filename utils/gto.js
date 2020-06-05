@@ -74,6 +74,16 @@ let questions = [
     options: ['-1', '4', 'null', 'empty'],
     answer: '-1',
   },
+  {
+    title: 'is-this-not-a-number',
+    options: ['true', 'false'],
+    answer: 'true',
+  },
+  {
+    title: 'hundred-by-zero',
+    options: ['0', 'Infinity', 'NaN', '1'],
+    answer: 'Infinity',
+  },
 ];
 
 module.exports = { questions };
