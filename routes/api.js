@@ -25,4 +25,50 @@ router.get('/gto/:title', (req, res) => {
   res.json({ slug: title, title: titleUppercase, mdContent });
 });
 
+router.get('/questions/all', async (req, res) => {
+  try {
+    const directoryPath = path.join(__dirname, '../questions');
+    const filesArr = await fs.readdirAsync(directoryPath);
+    const questions = [];
+    filesArr.forEach((file) => {
+      const slug = file.split('.')[0];
+      const titleFirstWord = slug.split('-')[0];
+      const title =
+        titleFirstWord.charAt(0).toUpperCase() +
+        titleFirstWord.slice(1) +
+        ' ' +
+        slug.split('-').slice(1).join(' ');
+      const mdContent = fs.readFileSync(directoryPath + '/' + file, 'utf8');
+      const question = { slug, title, mdContent };
+      questions.push(question);
+    });
+    res.json(questions);
+  } catch (error) {
+    console.log(error);
+  }
+});
+
+router.get('/programs/all', async (req, res) => {
+  try {
+    const directoryPath = path.join(__dirname, '../programs');
+    const filesArr = await fs.readdirAsync(directoryPath);
+    const programs = [];
+    filesArr.forEach((file) => {
+      const slug = file.split('.')[0];
+      const titleFirstWord = slug.split('-')[0];
+      const title =
+        titleFirstWord.charAt(0).toUpperCase() +
+        titleFirstWord.slice(1) +
+        ' ' +
+        slug.split('-').slice(1).join(' ');
+      const mdContent = fs.readFileSync(directoryPath + '/' + file, 'utf8');
+      const program = { slug, title, mdContent };
+      programs.push(program);
+    });
+    res.json(programs);
+  } catch (error) {
+    console.log(error);
+  }
+});
+
 module.exports = router;
