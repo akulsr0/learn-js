@@ -70,7 +70,7 @@ let questions = [
     answer: 'false',
   },
   {
-    title: 'is-deleted-array-element-undefined?',
+    title: 'is-deleted-array-element-undefined',
     options: ['-1', '4', 'null', 'empty'],
     answer: '-1',
   },
