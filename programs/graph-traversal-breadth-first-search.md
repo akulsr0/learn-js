@@ -69,4 +69,4 @@ g.bfs('A');
 Following graph is demonstrated in the code above.
 Note: This is an undirected Graph.
 
-<img width="150px" src="https://user-images.githubusercontent.com/43666833/82234116-94225c00-994e-11ea-8d95-b489ee2c5d40.png">
+![](https://user-images.githubusercontent.com/43666833/82234116-94225c00-994e-11ea-8d95-b489ee2c5d40.png)

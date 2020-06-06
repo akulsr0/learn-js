@@ -73,4 +73,4 @@ console.log(preorder(root));
 
 Following tree is mentioned in the program above.
 
-<img width='200px' src='https://user-images.githubusercontent.com/43666833/83410860-c8a91400-a434-11ea-9d0c-e09e3694b017.png'>
+![](https://user-images.githubusercontent.com/43666833/83410860-c8a91400-a434-11ea-9d0c-e09e3694b017.png)

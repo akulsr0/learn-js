@@ -64,4 +64,4 @@ console.log(bt.checkBST());
 
 Following trees are mentioned in above code.
 
-<img width='400px' src='https://user-images.githubusercontent.com/43666833/83417634-00698900-a440-11ea-98a5-2245e33c8a9b.png'>
+![](https://user-images.githubusercontent.com/43666833/83417634-00698900-a440-11ea-98a5-2245e33c8a9b.png)

@@ -100,4 +100,4 @@ bst.bfs();
 
 Following tree is demonstrated in the code above.
 
-<img width="250px" src="https://user-images.githubusercontent.com/43666833/82456922-73830f00-9ad2-11ea-8462-6735e2ec415a.png">
+![](https://user-images.githubusercontent.com/43666833/82456922-73830f00-9ad2-11ea-8462-6735e2ec415a.png)
