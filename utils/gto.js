@@ -84,6 +84,16 @@ let questions = [
     options: ['0', 'Infinity', 'NaN', '1'],
     answer: 'Infinity',
   },
+  {
+    title: 'string-search-regex',
+    options: ['undefined', 'D', 'H', 'h'],
+    answer: 'H',
+  },
+  {
+    title: 'array-reduce-right',
+    options: ['3LOL5', '5LOL21', '5LOL3', '239'],
+    answer: '5LOL21',
+  },
 ];
 
 module.exports = { questions };
