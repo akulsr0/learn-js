@@ -94,6 +94,31 @@ let questions = [
     options: ['3LOL5', '5LOL21', '5LOL3', '239'],
     answer: '5LOL21',
   },
+  {
+    title: 'substr-and-slice',
+    options: ['true', 'false'],
+    answer: 'false',
+  },
+  {
+    title: 'string-iterator',
+    options: ['string', 'number', 'undefined', 'symbol'],
+    answer: 'string',
+  },
+  {
+    title: 'string-repeat',
+    options: ['hahaha', 'hahahaha'],
+    answer: 'hahaha',
+  },
+  {
+    title: 'string-charCodeAt',
+    options: ['true', 'false'],
+    answer: 'true',
+  },
+  {
+    title: 'is-nan-finite',
+    options: ['undefined', 'true', 'false', 'Reference Error'],
+    answer: 'false',
+  },
 ];
 
 module.exports = { questions };
