@@ -30,6 +30,7 @@ console.log(Obj?.db?.user?.[hiiFunc]?.("learn js"));
 //Hii learn js
 ```
 
+
 ### 2. Nullish coalescing => symbol => ??
 
 New short-circuiting operator to handle only nullish values (undefined or null)
@@ -50,6 +51,8 @@ console.log('' ?? "learn js");
 // ''
 
 ```
+
+
 ### 3. Object.fromEntries()
 
 This will convert [['x',2], ['y',4]] into { x: 2, y: 4 }
@@ -68,6 +71,8 @@ console.log(Object.fromEntries(entries));
 //{x:2,u:4}
 
 ```
+
+
 ### 4. Array.prototype.flat()
 
 Flat returns a flattened version of an given array
@@ -91,6 +96,8 @@ console.log(nestedArray.flat(1));
 console.log(nestedArray.flat(Infinity));
 //[1,2,3] will flatten all nested array
 ```
+
+
 ### 5. Array.prototype.flatMap()
 
 This is use to create duplicate elements of an array
@@ -106,6 +113,8 @@ console.log([2,3,4].map((x)=>[x,x]).flat());
 console.log([1,2,3].flatMap((x)=>[x,x]));
 //[1,1,2,2,3,3]
 ```
+
+
 ### 6. Promise.allSettled()
 
 This will settled or complete when all the input promises are settled.
@@ -130,6 +139,8 @@ await Promise.allSettled(promise1).then(res=>{
 
 })();
 ```
+
+
 ### 7. Public and private class fields
 
 We can make our class fields private by using # before name of the field
@@ -180,6 +191,8 @@ console.log(pCounter.value);
 pCounter.#count = 23;
 //SyntaxError
 ```
+
+
 ### 8. Dynamic import()
 
 Now by using Dynamic import() we can import module on-demand (or conditionally).
@@ -216,6 +229,8 @@ module.learnJs();
 })();
 
 ```
+
+
 ### 9. globalThis
 
 Now we can access the global **this** in any javascript environment
@@ -232,6 +247,8 @@ console.log(globalThis);
 console.log(globalThis);
 //global
 ```
+
+
 ### 10. String.prototype.replaceAll()
 
 This is use to replace all instances of a given substring.
