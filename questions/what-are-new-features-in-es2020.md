@@ -244,6 +244,6 @@ console.log('abba'.replace('b','_'))
 // This only replace the first occurence of the substring.
 
 //Now we can use replaceAll() to remove all the occrurence
-console.log('abba','_');
+console.log('abba'.replaceAll('b','_'));
 //a__a
 ```
