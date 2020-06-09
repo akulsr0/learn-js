@@ -247,9 +247,3 @@ console.log('abba'.replace('b','_'))
 console.log('abba','_');
 //a__a
 ```
-
-
-
-
-
-
