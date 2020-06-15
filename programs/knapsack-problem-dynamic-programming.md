@@ -25,7 +25,7 @@ function knapsack(val, weight, n, w) {
 			}
 		}
 	}
-
+	// As a result mem[n][w] stores the maximum profit.
 	return mem[n][w];
 }
 let val = [4, 6, 3, 9, 2];
