@@ -4,13 +4,13 @@
 function knapsack(val, weight, n, w) {
 	var mem = [];
 	// Creating a matrix of size (n+1) X (w+1) 
-  // and initializing each element with 0 initially.
+  	// and initializing each element with 0 initially.
 	for (let i = 0; i < n + 1; i++) {
     		let intermediate_array = new Array(w+1).fill(0);
 		mem.push(intermediate_array);
 	}
 	// Storing maximum value for ith item 
-  // that has j weight in mem[i][j]. 
+  	// that has j weight in mem[i][j]. 
 	for (let i = 1; i < n + 1; i++) {
 		for (let j = 1; j < w + 1; j++) {
       // Making a choice on whether or not to include an item in the knapsack.
