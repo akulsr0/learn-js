@@ -13,7 +13,9 @@ function knapsack(val, weight, n, w) {
   // that has j weight in mem[i][j]. 
 	for (let i = 1; i < n + 1; i++) {
 		for (let j = 1; j < w + 1; j++) {
-      // Making a choice on whether or not to include an item in the knapsack. When we decide to choose the item, the capacity of the knapsack decreases. On the contrary, if we do not choose it, the capacity remains the same. Selection is done to maximise profit.
+      // Making a choice on whether or not to include an item in the knapsack.
+      // When we decide to choose the item, the capacity of the knapsack decreases. 
+      // On the contrary, if we do not choose it, the capacity remains the same. Selection is done to maximise profit.
 			if (weight[i - 1] <= j) {
 				mem[i][j] = Math.max(
 					val[i - 1] + mem[i - 1][j - weight[i - 1]],
