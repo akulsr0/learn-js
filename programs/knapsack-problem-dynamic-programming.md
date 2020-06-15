@@ -6,7 +6,7 @@ function knapsack(val, weight, n, w) {
 	// Creating a matrix of size (n+1) X (w+1) 
   // and initializing each element with 0 initially.
 	for (let i = 0; i < n + 1; i++) {
-    let intermediate_array = new Array(w+1).fill(0);
+    		let intermediate_array = new Array(w+1).fill(0);
 		mem.push(intermediate_array);
 	}
 	// Storing maximum value for ith item 
