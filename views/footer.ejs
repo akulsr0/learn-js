@@ -4,10 +4,26 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <script async defer src="https://buttons.github.io/buttons.js"></script>
+    <style>
+      .footer {
+        margin-top: 20px;
+        padding: 10px;
+        background-color: #666;
+        color: #fff;
+        display: flex;
+        flex-direction: row;
+      }
+      .footer a {
+        color: #fff;
+      }
+      .footer-left {
+        flex: 1;
+      }
+    </style>
   </head>
   <body>
-    <div class="footer" style="margin-top: 20px;">
-      <center>
+    <div class="footer">
+      <div class="footer-left">
         Made with ❤️ and Node.js by
         <a href="https://akulsrivastava.com/">Akul Srivastava</a> <br />
         <div style="margin-top: 10px; margin-bottom: 20px;">
@@ -38,7 +54,18 @@
             >Follow @akulsr0</a
           >
         </div>
-      </center>
+      </div>
+      <div class="footer-right">
+        <a
+          href="https://play.google.com/store/apps/details?id=com.akul.learnjs&pcampaignid=pcampaignidMKT-Other-global-all-co-prtnr-py-PartBadge-Mar2515-1"
+        >
+          <img
+            alt="Get it on Google Play"
+            style="width: 150px;"
+            src="https://play.google.com/intl/en_us/badges/static/images/badges/en_badge_web_generic.png"
+          />
+        </a>
+      </div>
     </div>
   </body>
 </html>
