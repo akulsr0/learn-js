@@ -119,6 +119,36 @@ let questions = [
     options: ['undefined', 'true', 'false', 'Reference Error'],
     answer: 'false',
   },
+  {
+    title: 'bool-compare',
+    options: ['true', 'false', 'NaN', 'undefined'],
+    answer: 'false',
+  },
+  {
+    title: 'guess-return-type',
+    options: ['number', 'function', 'string', 'Syntax Error'],
+    answer: 'function',
+  },
+  {
+    title: 'adding-empty-and-non-empty-array',
+    options: ['f,o,o', 'Type Error', '[][][f,o,o]', '[f,o,o]'],
+    answer: 'f,o,o',
+  },
+  {
+    title: 'new-array-to-string',
+    options: ["''", ',,,', ',,', '[]'],
+    answer: ',,',
+  },
+  {
+    title: 'set-array-element-by-index',
+    options: [
+      '[ <1 empty item>, 2, 3 ]',
+      '[undefined, 2, 3]',
+      '[null, 2, 3]',
+      'Type Error',
+    ],
+    answer: '[<1 empty item>, 2, 3]',
+  },
 ];
 
 module.exports = { questions };
