@@ -1,7 +1,5 @@
 # LearnJS
 
-[![HitCount](http://hits.dwyl.com/akulsr0/learn-js.svg)](http://hits.dwyl.com/akulsr0/learn-js)
-
 This website has a collection of Javascript programs and questions.
 
 Live Preview: http://learnjs.tech/
