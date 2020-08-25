@@ -1,3 +1,3 @@
 ```javascript
-console.log((true + false) > 2 + true;s)
+console.log((true + false) > 2 + true);
 ```
