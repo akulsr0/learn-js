@@ -1,9 +1,9 @@
 **Note:** Armstrong Numbers are those numbers whose sum of the cube of its digits equals the number itself. Thr following program prints all the armstrong numbers till 10,000.
 
 ```javascript
-function displayArmstrong(n){
+function displayArmstrong(num){
 	let s = 0, n=0, d=0;
-	for(let i=0; i<n; i++){
+	for(let i=0; i<num; i++){
 		n = i;
 		while(n){
 			d = n%10;
@@ -15,7 +15,7 @@ function displayArmstrong(n){
 	}	
 }
 
-let n = 10000; //limit upto which you want to find the number
+let num = 10000; //limit upto which you want to find the number
 displayArmstrong(n);
 
 ```
