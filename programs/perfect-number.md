@@ -2,19 +2,16 @@
 
 
 ```javascript
-function displayPerfect(n){
+function checkPerfect(n){
 	let s=0;
-	console.log("The Perfect Numbers from 1-10000 are listed below:");
-	for(let i=2; i<n; i++){
-		for(let j=1; j<i; j++){
-			if(i%j == 0) s+= j;
-		}
-		if(s==i) console.log(i);
-		s=0;
-	}	
+	for(let i=1; i<n; i++){
+		if(n%i == 0) s+= i;
+	}
+	if(s==i) console.log("Its a perfect number");
+	else console.log("Its NOT a perfect number");
 }
 
-let n = 10000; //the number upto which you want to display the number
-displayPerfect(n);
+let n = 6; //the number which you want to check
+checkPerfect(n);
 
 ```
