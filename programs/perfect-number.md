@@ -2,13 +2,19 @@
 
 
 ```javascript
-let s=0;
-console.log("The Perfect Numbers from 1-10000 are listed below:");
-for(let i=2; i<10000; i++){
-	for(let j=1; j<i; j++){
-		if(i%j == 0) s+= j;
-	}
-	if(s==i) console.log(i);
-	s=0;
+function displayPerfect(n){
+	let s=0;
+	console.log("The Perfect Numbers from 1-10000 are listed below:");
+	for(let i=2; i<n; i++){
+		for(let j=1; j<i; j++){
+			if(i%j == 0) s+= j;
+		}
+		if(s==i) console.log(i);
+		s=0;
+	}	
 }
+
+let n = 10000; //the number upto which you want to display the number
+displayPerfect(n);
+
 ```
