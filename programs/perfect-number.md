@@ -5,13 +5,11 @@
 function checkPerfect(n){
 	let s=0;
 	for(let i=1; i<n; i++){
-		if(n%i == 0) s+= i;
+		if(n%i === 0) s+= i;
 	}
-	if(s==i) console.log("Its a perfect number");
-	else console.log("Its NOT a perfect number");
+	if(s===n) return true
+  return false
 }
-
-let n = 6; //the number which you want to check
-checkPerfect(n);
-
+let n = 6;
+checkPerfect(n); // true
 ```
