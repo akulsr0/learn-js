@@ -63,7 +63,9 @@ remove();
 insert(23);
 insert(34);
 insert(67);
+remove();
 insert(72);
+insert(5);
 
 display();
 
