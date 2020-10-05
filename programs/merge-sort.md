@@ -1,8 +1,5 @@
 ```javascript
-/*Merge sort is an example of a divide-and-conquer type sorting-algorithm. The input for merge sort is an array of integers of length n, which needs to be sorted, typically from least to greatest. What merge sort does is it splits the unsorted array into two parts and then you recursively apply merge sort to these sub-arrays to further split the arrays until you are left with a bunch of single-element arrays.8*/
-
 var unsortedArr = [340, 1, 3, 3, 76, 23, 4, 12, 122, 7642, 646];
-
 
 function merge(leftArr, rightArr) {
 var sortedArr = [];
@@ -31,5 +28,7 @@ function mergesort(arr) {
     return merge(mergesort(leftArr), mergesort(rightArr));
   }
 }
+
 console.log('This should be the sorted array!')
-console.log(mergesort(unsortedArr));
+console.log(mergesort(unsortedArr)); // [1, 3, 3, 4, 12, 23, 76, 122, 340, 646, 7642]
+```
