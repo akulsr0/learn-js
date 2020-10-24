@@ -1,78 +1,80 @@
 ```
-const SIZE = 5;
-
-let rear = -1, front = -1;
-
-var CQ = [];
-
-function insert (value) {
-    
-    if(front === Math.floor((rear + 1) % SIZE)) {
-        return "Queue is Overflow!";
-    } 
-    
-    if(front === -1) {
-        front = 0;
-        rear = 0;
-    } else {
-        rear = Math.ceil((rear + 1) % SIZE);
+class CQ {
+	constructor(size) {
+		this.SIZE = size;
+		this.front = -1;
+		this.rear = -1;
+		this.queue = [];
     }
 
-    CQ[rear] = value;
-    return true;
-}
+   insert (value) { 
+		if(this.front === Math.floor((this.rear + 1) % this.SIZE)) {
+			return "Queue is Overflow!";
+		} 
 
-function remove() {
-    let value;
-    if(front === -1) {
-        return "Queue is Underflow!";
-    }
-
-    value = CQ[rear];
-    if(front === rear) {
-        front = -1;
-        rear = -1;
-    } else {
-        front=(front+1)%SIZE;
-    }
-    return value;
-}
-
-function display () {
-    if(front === -1) {
-        return "Queue is Underflow!";
-    } else {
-        if(front<rear)
-		{
-			for(i=front;i<=rear;i++)
-				console.log(CQ[i]);
+		if(this.front === -1) {
+			this.front = 0;
+			this.rear = 0;
+		} else {
+			this.rear = Math.ceil((this.rear + 1) % this.SIZE);
 		}
-		else
-		{
-			for(i=front;i<SIZE;i++)
-				console.log(CQ[i]);
-			for(i=0;i<=rear;i++)
-				console.log(CQ[i]);
-		}
+
+		this.queue[this.rear] = value;
+		return true;
     }
+
+    remove() {
+		let value;
+		if(this.front === -1) {
+			return "Queue is Underflow!";
+		}
+
+		value = this.queue[this.rear];
+		if(this.front === this.rear) {
+			this.front = -1;
+			this.rear = -1;
+		} else {
+			this.front= (this.front + 1) % this.SIZE;
+		}
+		return value;
+    }
+
+    display () {
+		if(this.front === -1) {
+			return "Queue is Underflow!";
+		} else {
+			if(this.front < this.rear)
+			{
+				for(let i = this.front; i <= this.rear; i++)
+					console.log(this.queue[i]);
+			}
+			else
+			{
+				for(let i = this.front; i < this.SIZE; i++)
+					console.log(this.queue[i]);
+				for(let i = 0; i <= this.rear; i++)
+					console.log(this.queue[i]);
+			}
+		}
+	}
 }
 
-insert(4);
-insert(12);
-remove();
-insert(23);
-insert(34);
-insert(67);
-remove();
-insert(72);
-insert(5);
+const cq = new CQ(5);
 
-display();
+cq.insert(5);
+cq.insert(23);
+cq.insert(12);
+cq.remove();
+cq.insert(56);
+cq.insert(43);
+cq.insert(67);
 
-// Output: 
+cq.display();
+
+// Output:
 23
-34
+12
+56
+43
 67
-72
-5
 ```
