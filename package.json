@@ -16,7 +16,7 @@
     "express": "^4.17.1",
     "highlight.js": "^10.0.3",
     "marked": "^1.0.0",
-    "underscore": "^1.10.2"
+    "underscore": "^1.12.1"
   },
   "devDependencies": {
     "jest": "^26.0.1"
